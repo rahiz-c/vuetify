@@ -112,7 +112,7 @@ export default class Course extends Vue {
       { title: "Bank", organizer: "AK", avatar: "/bank.jpg", status: 1 },
     ];
   
-  private ascending:boolean=true;
+  private ascending=true;
  
  private sortCourse(){
     if(this.ascending)
