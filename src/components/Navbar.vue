@@ -5,17 +5,27 @@
         x-large
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
-      <!-- <v-app-bar-title class="grey--text  display-1 text-no-wrap" > -->
       <div class="grey--text text-h4">
         <span class="font-weight-light">high</span>
         <span>Jump</span>
       </div>
-      <!-- </v-app-bar-title> -->
-      <!-- <v-spacer></v-spacer>
-            <v-btn text color="grey" small>
-                <span>sign out</span>
-                <v-icon small right>mdi-logout-variant</v-icon>
-            </v-btn> -->
+      <v-spacer></v-spacer>
+      <v-menu offset-y
+              rounded>
+       <template v-slot:activator='{on}'>
+         <v-btn v-on="on" text color="grey">
+           <span class="text-capitalize">menu</span>
+           <v-icon right>mdi-chevron-down</v-icon>
+         </v-btn>
+       </template>
+       <v-list class="primary--text" >
+         <v-list-item v-for="(link, index) in links"
+            :key="index"
+           :to="link.route">
+           <v-list-item-title>{{link.text}}</v-list-item-title>
+         </v-list-item>        
+       </v-list>
+    </v-menu>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" class="grey lighten-4" app>
       <v-layout column align-center>

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Dashboard from '../views/Dashboard.vue'
 import Course from '../views/Course.vue'
+import CourseDetail from '@/views/CourseDetail.vue'
 
 Vue.use(VueRouter)
 
@@ -18,6 +19,14 @@ const routes: Array<RouteConfig> = [
       title:'my courses'
     },
     component: Course
+  },
+  {
+    path: '/mycourse',
+    name: 'CourseDetail',
+    meta:{
+      title:'course detail'
+    },
+    component: CourseDetail
   },
   {
     path: '/account',

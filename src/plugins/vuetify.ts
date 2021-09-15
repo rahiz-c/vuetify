@@ -1,8 +1,18 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify/lib/framework';
+import {VExpansionPanels, 
+        VExpansionPanel,
+        VExpansionPanelHeader,
+        VExpansionPanelContent} from 'vuetify/lib';
 
 Vue.use(Vuetify, {
-    iconfont:'md',
+   components:{
+     VExpansionPanels, 
+     VExpansionPanel,
+     VExpansionPanelHeader,
+     VExpansionPanelContent
+   }
+    
     
 });
 
